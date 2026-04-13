@@ -146,4 +146,4 @@ Please send a pull request to add new resources. Each entry should include a sho
 
 ## License
 
-This list is released under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/) — to the extent possible under law, contributors have waived all copyright and related rights.
+This list is released under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
