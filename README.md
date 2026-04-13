@@ -10,7 +10,6 @@ Contributions are welcome! Feel free to open a pull request.
 - [Datasets](#datasets)
 - [Applications](#applications)
 - [Hardware](#hardware)
-- [Related Resources](#related-resources)
 
 ---
 
@@ -23,11 +22,18 @@ Algorithms, models, and frameworks for decoding EMG signals.
 - **[emg2pose](https://github.com/facebookresearch/emg2pose)** — A benchmark and baseline models (from Meta / Facebook Research) for hand pose estimation from surface EMG. Provides three baselines (tracking and regression variants of `vemg2pose`, plus a `neuropose` regression model), pre-trained checkpoints, and a PyTorch-based training pipeline. Presented at NeurIPS 2024.
 - **A generic non-invasive neuromotor interface for human-computer interaction** — Nature 2025. [Paper](https://www.nature.com/articles/s41586-025-09255-w). Demonstrates a generic, cross-user sEMG-based neuromotor interface for gesture decoding and HCI, foundational to Meta's wristband approach.
 
+### Open-Source EMG Tooling
+
+- **[BioPatRec](https://github.com/biopatrec/biopatrec)** — Open-source research platform for myoelectric pattern recognition and prosthetic-control experiments.
+- **[LibEMG](https://github.com/LibEMG/libemg)** — Python library for real-time and offline EMG pipelines, including data streaming, preprocessing, feature extraction, and model benchmarking.
+- **[openhdemg](https://github.com/GiacomoValliPhD/openhdemg)** — Python framework for high-density EMG (HD-EMG) analysis with decomposition workflows and a GUI for common analysis tasks.
+
 ### Classical Signal Processing
 
 - Bandpass filtering, notch filtering, and rectification for sEMG preprocessing.
 - Root Mean Square (RMS) and Mean Absolute Value (MAV) feature extraction.
 - Independent Component Analysis (ICA) and blind source separation for motor unit decomposition from HD-EMG.
+- Signal quality checks (electrode placement, motion artifacts, and baseline noise) with structured reporting based on CEDE/SENIAM guidance.
 
 ### Gesture & Pose Estimation Pipelines
 
@@ -43,37 +49,49 @@ A comprehensive source of raw EMG datasets: **[awesome-emg-data](https://github.
 
 ### Hand Pose & Gesture Recognition
 
-- **[emg2pose dataset](https://github.com/facebookresearch/emg2pose)** — 25,253 HDF5 files of synchronized 2 kHz sEMG and joint-angle motion-capture, spanning 193 participants and ~370 hours across 29 activity stages. Full dataset ~431 GiB; a 600 MiB mini version is available. License: CC-BY-NC-SA-4.0.
-- **Ninapro Database (DB1–DB9)** — The canonical hand-movement / grasp benchmark for prosthetic control.
-- **MeganePro (MDS1, MDS2, MDS4)** — Multimodal hand data including gaze and inertial measurements.
-- **Multi-day Forearm Dataset** (Pradhan et al., 2022) — Hand gesture recognition and biometrics.
-- **Hand Movement Kinematics** (Jarque-Bou, 2020) — Large calibrated database of grasps.
+| Dataset | Content | Data Size | Year |
+|---|---|---:|---:|
+| [emg2pose dataset](https://github.com/facebookresearch/emg2pose) | 2 kHz forearm sEMG + joint-angle mocap for hand-pose decoding (193 participants, 29 activity stages). | ~431 GiB full / 600 MiB mini | 2024 |
+| [GRABMyo](https://physionet.org/content/grabmyo/) | Gesture-recognition and biometrics sEMG with forearm/wrist electrode setups. | N/A | 2022 |
+| [Ninapro (DB1–DB9)](http://ninapro.hevs.ch/) | Canonical benchmark for hand movements and prosthetic-control research. | Multi-database (varies by DB) | 2012–2023 |
+| [MeganePro](https://doi.org/10.5281/zenodo.10517187) | Multimodal hand recordings (gesture, gaze, inertial, and biosignal streams). | N/A | 2024 |
+| [Multi-day Forearm Dataset](https://doi.org/10.1038/s41597-022-01836-y) | Multi-session forearm biosignal data for gesture recognition and biometrics. | N/A | 2022 |
+| [putEMG](https://biolab.put.poznan.pl/putemg-dataset/) | Surface EMG hand-gesture and force-recognition dataset across repeated sessions and users. | N/A | 2018 |
+| [Hand Movement Kinematics](https://doi.org/10.1038/s41597-020-0388-7) | Large calibrated grasp-kinematics dataset used in hand-movement modeling studies. | N/A | 2020 |
 
 ### Locomotion & Movement
 
-- **High-density EMG Locomotion Data** (Dimitrov et al., 2023) — Kinetic/kinematic recordings.
-- **Gait Muscle Activation** (Hug, 2019) — Individual signatures during walking / pedaling.
-- **Motor Primitives** (Santuz et al., 2020) — Patterns in high-speed locomotion.
-- **Sex-specific Gait Patterns** (Santuz et al., 2022) — Age and gender variations in walking.
+| Dataset | Content | Data Size | Year |
+|---|---|---:|---:|
+| [High-density EMG Locomotion Data](https://doi.org/10.1038/s41597-023-02139-1) | HD-EMG with synchronized kinetic/kinematic recordings for locomotion analysis. | N/A | 2023 |
+| [Gait Muscle Activation](https://doi.org/10.1038/s41597-019-0094-8) | Walking and pedaling muscle-activation signatures. | N/A | 2019 |
+| [Motor Primitives](https://doi.org/10.1038/s41597-020-0481-y) | HD-EMG patterns during high-speed locomotion. | N/A | 2020 |
+| [Sex-specific Gait Patterns](https://doi.org/10.1038/s41597-022-01470-8) | Walking patterns stratified by age and sex. | N/A | 2022 |
 
 ### Clinical & Pathological
 
-- **Duchenne Muscular Dystrophy** — Surface EMG in late-stage cases (Lobo-Prat et al., 2017).
-- **Parkinson's Disease** — Freezing-of-gait detection and muscle alteration datasets.
-- **Stroke Recovery** — Hand-to-nose movement assessment (Zhao et al., 2021).
-- **Knee Osteoarthritis** — Post-TKA modular control (Koehn et al., 2022).
+| Dataset | Content | Data Size | Year |
+|---|---|---:|---:|
+| [Duchenne Muscular Dystrophy](https://doi.org/10.1038/sdata.2017.175) | Surface EMG recordings from late-stage DMD cohorts. | N/A | 2017 |
+| [Parkinson's Disease (FoG)](https://doi.org/10.1038/s41597-021-01058-6) | EMG and movement recordings for freezing-of-gait detection. | N/A | 2021 |
+| [Stroke Recovery](https://doi.org/10.1038/s41597-021-00843-7) | Hand-to-nose movement assessment with EMG and kinematics. | N/A | 2021 |
+| [Knee Osteoarthritis (post-TKA)](https://doi.org/10.1038/s41597-022-01175-y) | Post-surgical modular motor-control signals and outcomes. | N/A | 2022 |
 
 ### Specialized
 
-- **Wearable Sensor Systems** — Real-time kinetic measurement (Wang et al., 2023).
-- **Exoskeleton Control** — Metabolic cost under myoelectric control (Hybart et al., 2023).
-- **Neuromorphic Computing** — EMG-camera fusion for hand gestures (Ceolini et al., 2020).
-- **Facial Mimicry** — Comparison with automated facial coding (Westermann et al., 2024).
+| Dataset | Content | Data Size | Year |
+|---|---|---:|---:|
+| [Wearable Sensor Systems](https://doi.org/10.1038/s41597-023-02156-0) | Wearable EMG-linked kinetic measurements for real-time estimation. | N/A | 2023 |
+| [Exoskeleton Control](https://doi.org/10.1038/s41597-023-02463-6) | Myoelectric exoskeleton-control data with metabolic-cost outcomes. | N/A | 2023 |
+| [Neuromorphic Computing](https://doi.org/10.1038/s41597-020-00664-4) | EMG-camera fusion dataset for neuromorphic gesture pipelines. | N/A | 2020 |
+| [Facial Mimicry](https://doi.org/10.1038/s41597-024-03023-4) | Facial mimicry EMG data with automated facial-coding comparison. | N/A | 2024 |
 
 ### Multi-modal
 
-- **fNIRS + EMG** — Motor cortex oxygen saturation during movement (Kurkin et al., 2021).
-- **EEG–EMG Coherence** — Hand-movement coordination (Xi et al., 2020).
+| Dataset | Content | Data Size | Year |
+|---|---|---:|---:|
+| [fNIRS + EMG](https://doi.org/10.1038/s41597-021-01047-9) | Simultaneous fNIRS + EMG during motor tasks to study cortical-muscular coupling. | N/A | 2021 |
+| [EEG–EMG Coherence](https://doi.org/10.1038/s41597-020-0398-9) | EEG/EMG recordings for hand-movement coordination and coherence analysis. | N/A | 2020 |
 
 Common dataset hosts: Zenodo, Figshare, Harvard Dataverse, Mendeley Data, institutional repositories, and GitHub.
 
@@ -129,14 +147,6 @@ Common dataset hosts: Zenodo, Figshare, Harvard Dataverse, Mendeley Data, instit
 
 - Fine-wire and needle EMG systems (Natus, Cadwell) for clinical neurology.
 - Emerging implantable systems for long-term myoelectric prosthesis control.
-
----
-
-## Related Resources
-
-- **[awesome-emg-data](https://github.com/x-labs-xyz/awesome-emg-data)** — 60+ curated EMG datasets.
-- **[emg2pose](https://github.com/facebookresearch/emg2pose)** — Hand pose estimation benchmark from Meta.
-- **[Ninapro](http://ninapro.hevs.ch/)** — The long-standing EMG benchmark project.
 
 ---
 
