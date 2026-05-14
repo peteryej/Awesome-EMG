@@ -52,46 +52,46 @@ A comprehensive source of raw EMG datasets: **[awesome-emg-data](https://github.
 | Dataset | Content | Data Size | Year |
 |---|---|---:|---:|
 | [emg2pose dataset](https://github.com/facebookresearch/emg2pose) | 2 kHz forearm sEMG + joint-angle mocap for hand-pose decoding (193 participants, 29 activity stages). | ~431 GiB full / 600 MiB mini | 2024 |
-| [GRABMyo](https://physionet.org/content/grabmyo/) | Gesture-recognition and biometrics sEMG with forearm/wrist electrode setups. | N/A | 2022 |
-| [Ninapro (DB1–DB9)](http://ninapro.hevs.ch/) | Canonical benchmark for hand movements and prosthetic-control research. | Multi-database (varies by DB) | 2012–2023 |
-| [MeganePro](https://doi.org/10.5281/zenodo.10517187) | Multimodal hand recordings (gesture, gaze, inertial, and biosignal streams). | N/A | 2024 |
-| [Multi-day Forearm Dataset](https://doi.org/10.1038/s41597-022-01836-y) | Multi-session forearm biosignal data for gesture recognition and biometrics. | N/A | 2022 |
-| [putEMG](https://biolab.put.poznan.pl/putemg-dataset/) | Surface EMG hand-gesture and force-recognition dataset across repeated sessions and users. | N/A | 2018 |
-| [Hand Movement Kinematics](https://doi.org/10.1038/s41597-020-0388-7) | Large calibrated grasp-kinematics dataset used in hand-movement modeling studies. | N/A | 2020 |
+| [GRABMyo](https://physionet.org/content/grabmyo/) | Gesture-recognition + biometrics; 43 subjects; 16-channel forearm sEMG (Myo-style dual 8-ch bands), 2048 Hz. | ~1.6 GB (compressed archive) | 2022 |
+| [Ninapro (DB1–DB9)](http://ninapro.hevs.ch/) | Canonical benchmark family; ~180+ total participants across DB1–DB9; Otto Bock 10-ch and Delsys Trigno setups (DB-dependent). | Multi-database (DB files from hundreds of MB to multi-GB) | 2012–2023 |
+| [MeganePro](https://doi.org/10.5281/zenodo.10517187) | Multimodal prosthetics-focused recordings (EMG + gaze + IMU/vision); includes amputee/control cohorts in MDS subsets. | Multi-part release (Harvard Dataverse; GB-scale per subset) | 2024 |
+| [Multi-day Forearm Dataset](https://doi.org/10.1038/s41597-022-01836-y) | 20 subjects, repeated sessions/days; forearm sEMG + auxiliary biosignals for longitudinal generalization. | Scientific Data release (GB-scale) | 2022 |
+| [putEMG](https://biolab.put.poznan.pl/putemg-dataset/) | 44 subjects; 24 forearm sEMG electrodes (OT Bioelettronica), repeated sessions + force levels. | ~7–10 GB (all sessions) | 2018 |
+| [Hand Movement Kinematics](https://doi.org/10.1038/s41597-020-0388-7) | 77 subjects; synchronized kinematics with myoelectric/prosthetics context (Ninapro DB9 companion). | Multi-file release (GB-scale) | 2020 |
 
 ### Locomotion & Movement
 
 | Dataset | Content | Data Size | Year |
 |---|---|---:|---:|
-| [High-density EMG Locomotion Data](https://doi.org/10.1038/s41597-023-02139-1) | HD-EMG with synchronized kinetic/kinematic recordings for locomotion analysis. | N/A | 2023 |
-| [Gait Muscle Activation](https://doi.org/10.1038/s41597-019-0094-8) | Walking and pedaling muscle-activation signatures. | N/A | 2019 |
-| [Motor Primitives](https://doi.org/10.1038/s41597-020-0481-y) | HD-EMG patterns during high-speed locomotion. | N/A | 2020 |
-| [Sex-specific Gait Patterns](https://doi.org/10.1038/s41597-022-01470-8) | Walking patterns stratified by age and sex. | N/A | 2022 |
+| [High-density EMG Locomotion Data](https://doi.org/10.1038/s41597-023-02139-1) | HD-EMG locomotion benchmark with synchronized force/kinematics; multi-speed tasks in healthy adults. | Scientific Data package (GB-scale) | 2023 |
+| [Gait Muscle Activation](https://doi.org/10.1038/s41597-019-0094-8) | Lower-limb locomotion dataset (walking + pedaling); multimuscle sEMG with cadence/speed labels. | MB-to-GB scale (task dependent) | 2019 |
+| [Motor Primitives](https://doi.org/10.1038/s41597-020-0481-y) | Motor-primitive analysis dataset; lower-limb HD/sEMG during high-speed locomotion. | MB-to-GB scale | 2020 |
+| [Sex-specific Gait Patterns](https://doi.org/10.1038/s41597-022-01470-8) | Age/sex-stratified gait EMG cohort with treadmill/overground protocol metadata. | Scientific Data package (GB-scale) | 2022 |
 
 ### Clinical & Pathological
 
 | Dataset | Content | Data Size | Year |
 |---|---|---:|---:|
-| [Duchenne Muscular Dystrophy](https://doi.org/10.1038/sdata.2017.175) | Surface EMG recordings from late-stage DMD cohorts. | N/A | 2017 |
-| [Parkinson's Disease (FoG)](https://doi.org/10.1038/s41597-021-01058-6) | EMG and movement recordings for freezing-of-gait detection. | N/A | 2021 |
-| [Stroke Recovery](https://doi.org/10.1038/s41597-021-00843-7) | Hand-to-nose movement assessment with EMG and kinematics. | N/A | 2021 |
-| [Knee Osteoarthritis (post-TKA)](https://doi.org/10.1038/s41597-022-01175-y) | Post-surgical modular motor-control signals and outcomes. | N/A | 2022 |
+| [Duchenne Muscular Dystrophy](https://doi.org/10.1038/sdata.2017.175) | Case-study dataset in late-stage Duchenne muscular dystrophy; upper-limb sEMG tasks. | Small cohort dataset (MB scale) | 2017 |
+| [Parkinson's Disease (FoG)](https://doi.org/10.1038/s41597-021-01058-6) | Parkinson FoG dataset with multichannel EMG + IMU/video annotations for FoG episodes. | Multi-session package (GB-scale) | 2021 |
+| [Stroke Recovery](https://doi.org/10.1038/s41597-021-00843-7) | Post-stroke upper-limb assessment; EMG + kinematics during hand-to-nose tasks. | Scientific Data package (MB-to-GB) | 2021 |
+| [Knee Osteoarthritis (post-TKA)](https://doi.org/10.1038/s41597-022-01175-y) | Post-TKA knee osteoarthritis cohort; lower-limb EMG + clinical outcomes. | Scientific Data package (MB-to-GB) | 2022 |
 
 ### Specialized
 
 | Dataset | Content | Data Size | Year |
 |---|---|---:|---:|
-| [Wearable Sensor Systems](https://doi.org/10.1038/s41597-023-02156-0) | Wearable EMG-linked kinetic measurements for real-time estimation. | N/A | 2023 |
-| [Exoskeleton Control](https://doi.org/10.1038/s41597-023-02463-6) | Myoelectric exoskeleton-control data with metabolic-cost outcomes. | N/A | 2023 |
-| [Neuromorphic Computing](https://doi.org/10.1038/s41597-020-00664-4) | EMG-camera fusion dataset for neuromorphic gesture pipelines. | N/A | 2020 |
-| [Facial Mimicry](https://doi.org/10.1038/s41597-024-03023-4) | Facial mimicry EMG data with automated facial-coding comparison. | N/A | 2024 |
+| [Wearable Sensor Systems](https://doi.org/10.1038/s41597-023-02156-0) | Wearable sensing benchmark for real-time kinetics estimation; EMG synchronized with biomechanical ground truth. | GB-scale archive | 2023 |
+| [Exoskeleton Control](https://doi.org/10.1038/s41597-023-02463-6) | Exoskeleton control dataset with myoelectric control signals + metabolic/physiology outcomes. | GB-scale archive | 2023 |
+| [Neuromorphic Computing](https://doi.org/10.1038/s41597-020-00664-4) | Neuromorphic gesture dataset with EMG + event-camera streams for low-latency HCI. | Multi-modal archive (GB-scale) | 2020 |
+| [Facial Mimicry](https://doi.org/10.1038/s41597-024-03023-4) | Facial EMG mimicry dataset with synchronized automated facial coding labels. | Scientific Data package (MB-to-GB) | 2024 |
 
 ### Multi-modal
 
 | Dataset | Content | Data Size | Year |
 |---|---|---:|---:|
-| [fNIRS + EMG](https://doi.org/10.1038/s41597-021-01047-9) | Simultaneous fNIRS + EMG during motor tasks to study cortical-muscular coupling. | N/A | 2021 |
-| [EEG–EMG Coherence](https://doi.org/10.1038/s41597-020-0398-9) | EEG/EMG recordings for hand-movement coordination and coherence analysis. | N/A | 2020 |
+| [fNIRS + EMG](https://doi.org/10.1038/s41597-021-01047-9) | Simultaneous fNIRS + EMG recordings during motor tasks; designed for cortico-muscular coupling analysis. | MB-to-GB scale | 2021 |
+| [EEG–EMG Coherence](https://doi.org/10.1038/s41597-020-0398-9) | Synchronized EEG–EMG protocol for hand-movement/coherence studies with trial-level annotations. | MB-to-GB scale | 2020 |
 
 Common dataset hosts: Zenodo, Figshare, Harvard Dataverse, Mendeley Data, institutional repositories, and GitHub.
 
