@@ -17,10 +17,15 @@ Contributions are welcome! Feel free to open a pull request.
 
 Algorithms, models, and frameworks for decoding EMG signals.
 
-### Deep Learning & Neural Interfaces
+### Modeling Methods
 
-- **[emg2pose](https://github.com/facebookresearch/emg2pose)** — A benchmark and baseline models (from Meta / Facebook Research) for hand pose estimation from surface EMG. Provides three baselines (tracking and regression variants of `vemg2pose`, plus a `neuropose` regression model), pre-trained checkpoints, and a PyTorch-based training pipeline. Presented at NeurIPS 2024.
-- **A generic non-invasive neuromotor interface for human-computer interaction** — Nature 2025. [Paper](https://www.nature.com/articles/s41586-025-09255-w). Demonstrates a generic, cross-user sEMG-based neuromotor interface for gesture decoding and HCI, foundational to Meta's wristband approach.
+See **[EMG Modeling Methods](EMG_MODELING_METHODS.md)** for a maintained survey of recent EMG modeling papers (2024+), with reference tables, paper summaries, code and dataset links, and noted limitations.
+
+- **[Preprocessing](EMG_MODELING_METHODS.md#preprocessing)** — Learned denoising and signal-enhancement methods.
+- **[Gesture recognition](EMG_MODELING_METHODS.md#gesture-recognition)** — Discrete gesture decoding, cross-user generalization, and adaptation.
+- **[Pose estimation](EMG_MODELING_METHODS.md#pose-estimation)** — Continuous joint-pose regression and tracking.
+- **[Fusion](EMG_MODELING_METHODS.md#fusion-emg--imu-emg--cv)** — EMG combined with IMU, computer vision, and other complementary sensing.
+- **[Force estimation](EMG_MODELING_METHODS.md#force-estimation)** — Continuous force, pressure, and kinetics estimation.
 
 ### Open-Source EMG Tooling
 
